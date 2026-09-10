@@ -80,9 +80,10 @@ async function getSlideRelationshipMap(
 }
 
 // ========================================
-// GET ALL MEDIA → SLIDE MAPPING
+// GET DIRECT TRANSFORM
 //
-// Audio / Video only
+// Extracts the element's position and
+// dimensions from its transform properties.
 // ========================================
 function getDirectTransform(
   element: Element
@@ -732,15 +733,10 @@ async function getImagesFromSlide(
   //
   // PowerPoint may store an image as:
   //
-  // <p:pic>
+  // 1. <p:pic>
+  // 2. <p:sp> with <a:blipFill>
   //
-  // OR
-  //
-  // <p:sp>
-  //   <a:blipFill>
-  //
-  // The second case was causing
-  // Slide 3 to be missed.
+  // Both representations are handled here.
   // ========================================
 
   const imageElements:

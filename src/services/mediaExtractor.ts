@@ -80,9 +80,10 @@ async function getSlideRelationshipMap(
 }
 
 // ========================================
-// GET ALL MEDIA → SLIDE MAPPING
+// GET MEDIA → SLIDE MAPPING
 //
-// Audio / Video only
+// Builds a map of media file paths
+// to their corresponding slide numbers.
 // ========================================
 async function getMediaSlideMapping(
   zip: JSZip

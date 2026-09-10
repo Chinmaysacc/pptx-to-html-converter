@@ -95,12 +95,10 @@ async function getThemeFonts(
 // ========================================
 // GET FONT FROM A TEXT RUN
 //
-// Checks:
-//
-// 1. Direct font on <a:rPr>
-// 2. Major theme font
-// 3. Minor theme font
-// 4. Default theme font
+// Checks for a direct font declaration.
+// If none is found, falls back to the
+// presentation theme's minor font,
+// major font, and finally Arial.
 // ========================================
 
 function getRunFont(

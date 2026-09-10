@@ -113,6 +113,5 @@ export async function extractSlideSizeFromPptx(
 }
 
 // ========================================
-// EXTRACT ALL IMAGES FROM PPTX
+// EXTRACT SLIDE DIMENSIONS FROM PPTX
 // ========================================
-
